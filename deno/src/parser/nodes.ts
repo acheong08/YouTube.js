@@ -519,6 +519,7 @@ export { default as VideoAttributesSectionView } from './classes/VideoAttributes
 export { default as VideoAttributeView } from './classes/VideoAttributeView.ts';
 export { default as VideoCard } from './classes/VideoCard.ts';
 export { default as VideoDescriptionCourseSection } from './classes/VideoDescriptionCourseSection.ts';
+export { default as VideoDescriptionGamingSection } from './classes/VideoDescriptionGamingSection.ts';
 export { default as VideoDescriptionHeader } from './classes/VideoDescriptionHeader.ts';
 export { default as VideoDescriptionInfocardsSection } from './classes/VideoDescriptionInfocardsSection.ts';
 export { default as VideoDescriptionMusicSection } from './classes/VideoDescriptionMusicSection.ts';

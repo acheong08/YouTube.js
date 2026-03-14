@@ -7,6 +7,8 @@ import VideoDescriptionInfocardsSection from './VideoDescriptionInfocardsSection
 import VideoDescriptionMusicSection from './VideoDescriptionMusicSection.ts';
 import VideoDescriptionTranscriptSection from './VideoDescriptionTranscriptSection.ts';
 import VideoDescriptionCourseSection from './VideoDescriptionCourseSection.ts';
+import VideoDescriptionGamingSection from './VideoDescriptionGamingSection.ts';
+import MerchandiseShelf from './MerchandiseShelf.ts';
 import VideoAttributesSectionView from './VideoAttributesSectionView.ts';
 import HowThisWasMadeSectionView from './HowThisWasMadeSectionView.ts';
 import ReelShelf from './ReelShelf.ts';
@@ -17,17 +19,17 @@ export default class StructuredDescriptionContent extends YTNode {
   public items: ObservedArray<
     VideoDescriptionHeader | ExpandableVideoDescriptionBody | VideoDescriptionMusicSection |
     VideoDescriptionInfocardsSection | VideoDescriptionTranscriptSection |
-    VideoDescriptionCourseSection | HorizontalCardList | ReelShelf | VideoAttributesSectionView |
-    HowThisWasMadeSectionView
+    VideoDescriptionCourseSection | VideoDescriptionGamingSection | HorizontalCardList |
+    ReelShelf | VideoAttributesSectionView | HowThisWasMadeSectionView | MerchandiseShelf
   >;
 
   constructor(data: RawNode) {
     super();
     this.items = Parser.parseArray(data.items, [
       VideoDescriptionHeader, ExpandableVideoDescriptionBody, VideoDescriptionMusicSection,
-      VideoDescriptionInfocardsSection, VideoDescriptionCourseSection, VideoDescriptionTranscriptSection,
+      VideoDescriptionInfocardsSection, VideoDescriptionCourseSection, VideoDescriptionGamingSection,
       VideoDescriptionTranscriptSection, HorizontalCardList, ReelShelf, VideoAttributesSectionView,
-      HowThisWasMadeSectionView
+      HowThisWasMadeSectionView, MerchandiseShelf
     ]);
   }
 }
